@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DevOps Learner | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">DevOps<span>Learner</span></div>
+
+        <div class="nav-right">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a> </li>
+                </ul>
+            </nav>
+
+            
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <h1>I'M A <span>DEVOPS</span><br>LEARNER</h1>
+
+            <p>
+                DevOps learner building hands-on projects in Linux, Docker,
+                CI/CD with GitHub Actions, and AWS Cloud to understand real-world
+                infrastructure and automation.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn-primary">View Projects</button>
+                <button class="btn-secondary">Learning Journey</button>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img src="assets/images/profile.jpg" alt="Profile Photo">
+
+            <div class="floating-card card-top">
+                <span>&lt;/&gt;</span>
+                <p>CI/CD<br>GitHub Actions</p>
+            </div>
+
+            <div class="floating-card card-bottom">
+                <span>☁</span>
+                <p>Cloud<br>AWS Basics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEVOPS LEARNING AREAS -->
+    <section class="learning-areas" id="skills">
+
+        <h2>My <span>DevOps</span> Learning Areas</h2>
+        <p class="section-desc">
+            Focused on mastering essential DevOps tools and practices through
+            hands-on projects and continuous learning.
+        </p>
+
+        <div class="areas-grid">
+
+            <div class="area-card">
+                <h3>Linux</h3>
+                <p>
+                    Intermediate knowledge of command-line operations, shell scripting,
+                    system administration, and server management.
+                </p>
+            </div>
+
+            <div class="area-card">
+                <h3>Git & GitHub</h3>
+                <p>
+                    Version control, branching strategies, collaboration workflows,
+                    and CI/CD integration using GitHub Actions.
+                </p>
+            </div>
+
+            <div class="area-card">
+                <h3>Docker</h3>
+                <p>
+                    Containerization concepts, Dockerfile creation,
+                    Docker Compose, and image management.
+                </p>
+            </div>
+
+            <div class="area-card">
+                <h3>AWS Cloud</h3>
+                <p>
+                    Hands-on experience with EC2, S3, IAM,
+                    and deploying basic cloud infrastructure.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+
+        <h2>Practice & <span>Lab Projects</span></h2>
+        <p class="section-desc">
+            Hands-on DevOps projects built during learning and practice labs.
+        </p>
+
+        <!-- FILTER BUTTONS -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="cicd">CI/CD</button>
+            <button class="filter-btn" data-filter="docker">Docker</button>
+            <button class="filter-btn" data-filter="cloud">Cloud</button>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="project-grid">
+
+            <div class="project-card cicd">
+                <h3>CI/CD Pipeline with GitHub Actions</h3>
+                <p>
+                    Automated build and deployment pipeline using GitHub Actions
+                    for continuous integration and testing.
+                </p>
+                <span class="tag">CI/CD</span>
+            </div>
+
+            <div class="project-card docker">
+                <h3>Dockerized Web Application</h3>
+                <p>
+                    Containerized a web application using Docker,
+                    Dockerfile, and Docker Compose.
+                </p>
+                <span class="tag">Docker</span>
+            </div>
+
+            <div class="project-card cloud">
+                <h3>AWS EC2 & S3 Setup</h3>
+                <p>
+                    Deployed applications on AWS EC2, configured S3 buckets,
+                    and managed IAM permissions.
+                </p>
+                <span class="tag">Cloud</span>
+            </div>
+
+            <div class="project-card cicd">
+                <h3>Automated Testing Workflow</h3>
+                <p>
+                    Implemented automated testing workflows triggered
+                    on every GitHub push.
+                </p>
+                <span class="tag">CI/CD</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LEARNING JOURNEY & SKILLS -->
+    <section class="journey-skills">
+
+        <h2>My <span>Learning Journey</span></h2>
+
+        <div class="journey-container">
+
+            <!-- LEFT: JOURNEY -->
+            <div class="journey">
+                <div class="journey-item">
+                    <span>2023</span>
+                    <p>Started with Linux fundamentals, command-line usage, and Git basics.</p>
+                </div>
+
+                <div class="journey-item">
+                    <span>2024</span>
+                    <p>Learned Docker, containerization concepts, and CI/CD using GitHub Actions.</p>
+                </div>
+
+                <div class="journey-item">
+                    <span>2025</span>
+                    <p>Working with AWS Free Tier (EC2, S3, IAM) and building real practice labs.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT: SKILLS -->
+            <div class="skills">
+
+                <div class="skill">
+                    <p>Linux <span>80%</span></p>
+                    <div class="bar">
+                        <div class="fill linux"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Git & GitHub <span>80%</span></p>
+                    <div class="bar">
+                        <div class="fill git"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Docker <span>70%</span></p>
+                    <div class="bar">
+                        <div class="fill docker"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>CI/CD (GitHub Actions) <span>65%</span></p>
+                    <div class="bar">
+                        <div class="fill cicd"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>AWS Basics <span>60%</span></p>
+                    <div class="bar">
+                        <div class="fill aws"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+   
+  <!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+
+    <h2>Connect With <span>Me</span></h2>
+    <p class="section-desc">
+      Feel free to connect with me through any of the platforms below.
+    </p>
+  
+    <div class="contact-icons">
+
+        <a href= "https://www.linkedin.com/in/chandu-gahtori/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      
+        <a href="https://github.com/chandugahtori" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+        <a href="mailto:your-email@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+        <a href="https://wa.me/91983714505" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      
+      </div>
+      
+  </section>
+  
+  
+
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
