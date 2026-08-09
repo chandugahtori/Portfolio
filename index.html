@@ -1,283 +1,1077 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
-    <title>DevOps Learner | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Primary SEO -->
+    <title>Chandra Shekhar | DevOps & Cloud Engineer</title>
+    <meta name="description"
+        content="Chandra Shekhar Gahtori — DevOps & Cloud Engineer skilled in AWS, Docker, Terraform, GitHub Actions, Python and Linux. Portfolio showcasing real-world cloud infrastructure and automation projects." />
+    <meta name="keywords"
+        content="DevOps, Cloud Engineer, AWS, Docker, Terraform, GitHub Actions, Python, Linux, CI/CD, Portfolio, Chandra Shekhar, Chandu Gahtori" />
+    <meta name="author" content="Chandra Shekhar Gahtori" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chandra Shekhar | DevOps & Cloud Engineer" />
+    <meta property="og:description"
+        content="Building scalable cloud infrastructure, automating deployments, and creating production-ready applications." />
+    <meta property="og:url" content="https://chandugahtori.github.io/Portfolio/" />
+    <meta property="og:image" content="assets/images/profile.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chandra Shekhar | DevOps & Cloud Engineer" />
+    <meta name="twitter:description"
+        content="DevOps & Cloud Engineer — AWS, Docker, Terraform, GitHub Actions, Python, Linux." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://chandugahtori.github.io/Portfolio/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">DevOps<span>Learner</span></div>
+    <!-- ── LOADING SCREEN ──────────────────────────────────────── -->
+    <div id="loading-screen">
+        <div class="loader-logo">Chandu<span>.</span></div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
+    <div id="scroll-progress"></div>
+
+    <!-- ── BACK TO TOP ─────────────────────────────────────────── -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ── MOBILE OVERLAY ──────────────────────────────────────── -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- ── MOBILE MENU ─────────────────────────────────────────── -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ── NAVBAR ──────────────────────────────────────────────── -->
+    <header class="navbar" role="banner">
+        <a href="#home" class="logo" aria-label="Chandu portfolio home">
+            Chandra Shekhar<span></span>
+        </a>
+
+        <nav class="nav-center" aria-label="Primary navigation">
+            <ul class="nav-links" role="list">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
         <div class="nav-right">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a> </li>
-                </ul>
-            </nav>
-
-            
-
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                <i class="fas fa-sun" id="theme-icon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
+    <!-- ═══════════════════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="hero" id="home" aria-label="Introduction">
+        <div class="hero-grid container">
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-left">
-            <h1>I'M A <span>DEVOPS</span><br>LEARNER</h1>
+            <!-- LEFT -->
+            <div class="hero-left">
+                <p class="hero-greeting hero-anim"
+                    style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                    Hi, I'm
+                </p>
 
-            <p>
-                DevOps learner building hands-on projects in Linux, Docker,
-                CI/CD with GitHub Actions, and AWS Cloud to understand real-world
-                infrastructure and automation.
+                <h1 class="hero-name hero-anim"
+                    style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                    Chandra<br>Shekhar
+                </h1>
+
+                <div class="hero-typed-wrap hero-anim"
+                    style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                    <span class="typed-text"></span><span class="cursor"></span>
+                </div>
+
+                <p class="hero-desc hero-anim"
+                    style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                    I build <strong>scalable cloud infrastructure</strong>, automate deployments, and craft
+                    production-ready applications using <strong>AWS, Docker, Terraform, GitHub Actions,
+                        Python</strong> and <strong>Linux</strong>.
+                </p>
+
+                <div class="hero-buttons hero-anim"
+                    style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                    <a href="assets/resume.pdf" download class="btn-primary" id="btn-resume">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#projects" class="btn-secondary" id="btn-projects">
+                        <i class="fas fa-folder-open"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn-secondary" id="btn-contact">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+
+                <div class="hero-stats hero-anim"
+                    style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                    <div class="hero-stat">
+                        <span class="num">3+</span>
+                        <span class="label">Featured Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="num">AWS</span>
+                        <span class="label">Cloud & DevOps</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="num">Open</span>
+                        <span class="label">to Work</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-right hero-anim"
+                style="opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;">
+                <div class="hero-img-wrap">
+                    <div class="hero-img-bg"></div>
+                    <div class="hero-img-glow"></div>
+                    <img src="assets/images/profile.png" alt="Chandra Shekhar — DevOps & Cloud Engineer"
+                        loading="eager" />
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="about section" id="about" aria-label="About me">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span>Me</span></h2>
+                <p class="section-subtitle">
+                    A Computer Science student who discovered a passion for cloud infrastructure
+                    and decided to pursue it seriously.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <!-- Left: text -->
+                <div class="about-text reveal">
+                    <h3>Turning Curiosity Into Infrastructure</h3>
+                    <p>
+                        I'm <strong>Chandra Shekhar</strong>, a Computer Science graduate
+                        with a strong interest in DevOps, cloud computing, and software automation.
+                        I started this journey out of curiosity about how real-world applications
+                        are deployed and scaled—and that curiosity continues to drive me every day.
+                    </p>
+                    <p>
+                        I enjoy bridging the gap between development and operations. Whether it's
+                        containerizing applications with Docker, building and deploying the
+                        <strong>Navix Grocery</strong> platform using React, FastAPI, PostgreSQL,
+                        Nginx, and Docker, or automating infrastructure with AWS and CI/CD pipelines,
+                        I enjoy building complete, production-ready solutions from development to deployment.
+                    </p>
+
+                    <p>
+                        When I'm not writing YAML or Bash scripts, you'll find me on the sports field —
+                        I'm a national-level Kho-Kho player and former college team captain, which taught
+                        me leadership, discipline, and performing under pressure.
+                    </p>
+
+                    <div class="about-values stagger">
+                        <div class="about-value-card reveal">
+                            <div class="icon">☁️</div>
+                            <h4>Cloud Computing</h4>
+                            <p>AWS EC2, S3, Lambda, IAM, CloudWatch</p>
+                        </div>
+                        <div class="about-value-card reveal">
+                            <div class="icon">⚙️</div>
+                            <h4>DevOps & CI/CD</h4>
+                            <p>Docker, GitHub Actions, Terraform</p>
+                        </div>
+                        <div class="about-value-card reveal">
+                            <div class="icon">🐍</div>
+                            <h4>Programming</h4>
+                            <p>Python, Bash, Java, Linux scripting</p>
+                        </div>
+                        <div class="about-value-card reveal">
+                            <div class="icon">🚀</div>
+                            <h4>Always Learning</h4>
+                            <p>Kubernetes, Ansible, Terraform IaC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: facts -->
+                <div class="about-facts reveal">
+                    <h3>Quick Facts</h3>
+
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4>B.Tech in Computer Science</h4>
+                            <p>Focused on Cloud & DevOps</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fab fa-aws"></i></div>
+                        <div>
+                            <h4>AWS Cloud Practitioner</h4>
+                            <p>Hands-on with EC2, S3, Lambda, IAM, CloudWatch</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fab fa-docker"></i></div>
+                        <div>
+                            <h4>Docker & Containers</h4>
+                            <p>Dockerized Django app with Nginx + PostgreSQL</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-code-branch"></i></div>
+                        <div>
+                            <h4>CI/CD Pipelines</h4>
+                            <p>Serverless pipelines using GitHub Actions + AWS Lambda</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-trophy"></i></div>
+                        <div>
+                            <h4>National-Level Athlete</h4>
+                            <p>Kho-Kho · Former College Team Captain</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>India · Open to Remote Opportunities</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       SKILLS SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="skills-section section" id="skills" aria-label="Technical skills">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Technical Arsenal</span>
+                <h2 class="section-title">My <span>Skills</span></h2>
+                <p class="section-subtitle">
+                    A curated set of tools and technologies I work with to build,
+                    deploy, and automate production-ready systems.
+                </p>
+            </div>
+
+            <div class="skills-categories stagger">
+
+                <!-- Cloud & AWS -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-cat-icon"><i class="fab fa-aws"></i></div>
+                        <span class="skill-cat-title">Cloud & AWS</span>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-item-icon">⚡</span>
+                            <span class="skill-item-name">AWS EC2</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🪣</span>
+                            <span class="skill-item-name">AWS S3</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">λ</span>
+                            <span class="skill-item-name">AWS Lambda</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🔐</span>
+                            <span class="skill-item-name">IAM & CloudWatch</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & CI/CD -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-cat-icon"><i class="fas fa-infinity"></i></div>
+                        <span class="skill-cat-title">DevOps & CI/CD</span>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-docker" style="color:#2496ed"></i></span>
+                            <span class="skill-item-name">Docker</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-github"></i></span>
+                            <span class="skill-item-name">GitHub Actions</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🏗️</span>
+                            <span class="skill-item-name">Terraform</span>
+                            <span class="skill-item-level">Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">📦</span>
+                            <span class="skill-item-name">Docker Compose</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+                        <span class="skill-cat-title">Programming</span>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-python" style="color:#3776ab"></i></span>
+                            <span class="skill-item-name">Python</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🐚</span>
+                            <span class="skill-item-name">Bash / Shell</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-java" style="color:#f89820"></i></span>
+                            <span class="skill-item-name">Java</span>
+                            <span class="skill-item-level">Basic</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">📄</span>
+                            <span class="skill-item-name">YAML</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linux & Networking -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-cat-icon"><i class="fab fa-linux"></i></div>
+                        <span class="skill-cat-title">Linux & Networking</span>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-linux"></i></span>
+                            <span class="skill-item-name">Linux CLI</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🌐</span>
+                            <span class="skill-item-name">Networking Basics</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🖥️</span>
+                            <span class="skill-item-name">Server Admin</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🔒</span>
+                            <span class="skill-item-name">SSH / Security</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version Control -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-cat-icon"><i class="fab fa-git-alt"></i></div>
+                        <span class="skill-cat-title">Version Control</span>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-git-alt" style="color:#f05032"></i></span>
+                            <span class="skill-item-name">Git</span>
+                            <span class="skill-item-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon"><i class="fab fa-github"></i></span>
+                            <span class="skill-item-name">GitHub</span>
+                            <span class="skill-item-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🔀</span>
+                            <span class="skill-item-name">Branching Strategies</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">📊</span>
+                            <span class="skill-item-name">Pull Requests / Reviews</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases & Tools -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+                        <span class="skill-cat-title">Databases & Tools</span>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🗄️</span>
+                            <span class="skill-item-name">MySQL</span>
+                            <span class="skill-item-level">Intermediate</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🐘</span>
+                            <span class="skill-item-name">PostgreSQL</span>
+                            <span class="skill-item-level">Basic</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">🔍</span>
+                            <span class="skill-item-name">VS Code</span>
+                            <span class="skill-item-level">Daily Driver</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-item-icon">📋</span>
+                            <span class="skill-item-name">Postman / API Testing</span>
+                            <span class="skill-item-level">Hands-on</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="projects-section section" id="projects" aria-label="Portfolio projects">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <p class="section-subtitle">
+                    Real-world projects built from scratch using modern DevOps tools
+                    and cloud infrastructure.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cicd">CI/CD</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+                <button class="filter-btn" data-filter="docker">Docker</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="project-grid">
+
+                <!-- Project 1: Serverless CI/CD Pipeline -->
+                <article class="project-card reveal" data-category="cicd cloud"
+                    style="transition:opacity 0.4s ease,transform 0.4s ease;">
+                    <div class="project-img-wrap">
+                        <img src="assets/images/project-cicd.png" alt="Serverless CI/CD Pipeline Project"
+                            class="project-img" loading="lazy" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">GitHub Actions</span>
+                            <span class="project-tag">AWS Lambda</span>
+                            <span class="project-tag">Serverless</span>
+                            <span class="project-tag">CI/CD</span>
+                        </div>
+                        <h3 class="project-title">Serverless CI/CD Pipeline</h3>
+                        <p class="project-desc">
+                            End-to-end automated deployment pipeline that triggers on every push,
+                            runs tests, and deploys a serverless function to AWS Lambda using
+                            GitHub Actions workflows.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">Automated build, test &amp; deploy on every git push</div>
+                            <div class="achievement-item">AWS Lambda + API Gateway integration</div>
+                            <div class="achievement-item">CloudWatch monitoring &amp; alerts configured</div>
+                            <div class="achievement-item">Zero-downtime deployment strategy</div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/chandugahtori" target="_blank" rel="noopener"
+                                class="btn-project btn-github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://frontend-six-kappa-yijmqe0p0i.vercel.app/" target="_blank"
+                            class="btn-project btn-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Dockerized Django Notes App -->
+                <article class="project-card reveal" data-category="docker"
+                    style="transition:opacity 0.4s ease,transform 0.4s ease;">
+                    <div class="project-img-wrap">
+                        <img src="assets/images/project-docker.png" alt="Dockerized Django Notes Application"
+                            class="project-img" loading="lazy" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">PostgreSQL</span>
+                            <span class="project-tag">Nginx</span>
+                        </div>
+                        <h3 class="project-title">Dockerized Django Notes App</h3>
+                        <p class="project-desc">
+                            Full-stack Django notes application containerized with Docker Compose.
+                            Uses multi-container setup with Nginx as reverse proxy, Django backend,
+                            and PostgreSQL database — all orchestrated via Docker Compose.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">Multi-container setup: Django + Nginx + PostgreSQL</div>
+                            <div class="achievement-item">Docker Compose for container orchestration</div>
+                            <div class="achievement-item">Persistent volume storage for database data</div>
+                            <div class="achievement-item">Production-ready Nginx reverse proxy config</div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/chandugahtori" target="_blank" rel="noopener"
+                                class="btn-project btn-github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn-project btn-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-category="fullstack"
+                    style="transition: opacity 0.4s ease, transform 0.4s ease;">
+                    <div class="project-img-wrap">
+                        <img src="assets/images/project-navix-grocery.png" alt="Navix Grocery Platform"
+                            class="project-img" loading="lazy" />
+                        <div class="project-overlay"></div>
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">PostgreSQL</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Nginx</span>
+                        </div>
+
+                        <h3 class="project-title">
+                            Navix Grocery Platform
+                        </h3>
+
+                        <p class="project-desc">
+                            A full-stack grocery platform built with React, FastAPI, PostgreSQL,
+                            Docker, and Nginx. Designed with a scalable architecture,
+                            containerized services, and a production-ready deployment workflow
+                            following modern DevOps practices.
+                        </p>
+
+                        <div class="project-achievements">
+                            <div class="achievement-item">Responsive React frontend with modern UI</div>
+
+                            <div class="achievement-item">
+                                FastAPI backend with RESTful APIs and PostgreSQL database
+                            </div>
+
+                            <div class="achievement-item">
+                                Dockerized multi-container architecture with Docker Compose
+                            </div>
+
+                            <div class="achievement-item">
+                                Nginx reverse proxy with production-ready deployment setup
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+
+                            <a href="https://github.com/chandugahtori/navix-grocery" target="_blank" rel="noopener"
+                                class="btn-project btn-github">
+
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                            <a href="#" class="btn-project btn-demo">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       JOURNEY / TIMELINE SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="journey-section section" id="journey" aria-label="My journey timeline">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">My Story</span>
+                <h2 class="section-title">Learning <span>Journey</span></h2>
+                <p class="section-subtitle">
+                    A timeline of my growth from a curious student
+                    to a DevOps &amp; Cloud practitioner.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2022</span>
+                            <span class="timeline-type">Education</span>
+                        </div>
+                        <h3 class="timeline-title">Started B.Tech in Computer Science</h3>
+                        <p class="timeline-desc">
+                            Began university with a focus on core CS fundamentals — data structures,
+                            algorithms, operating systems, and networking. This gave me the foundation
+                            to understand how systems actually work.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2024</span>
+                            <span class="timeline-type">Learning</span>
+                        </div>
+                        <h3 class="timeline-title">Development</h3>
+                        <p class="timeline-desc">
+                            Started building practical applications using Python, HTML,
+                            CSS, JavaScript, Django, and FastAPI. Learned backend development,
+                            REST APIs, databases, and software architecture through hands-on projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2025</span>
+                            <span class="timeline-type">DevOps Journey</span>
+                        </div>
+                        <h3 class="timeline-title">Transitioned into DevOps & Cloud</h3>
+                        <p class="timeline-desc">
+                            Learned Linux, Git, Docker, Docker Compose, Nginx, AWS, Terraform, GitHub Actions, and CI/CD
+                            while focusing on automation and modern deployment practices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2026</span>
+                            <span class="timeline-type">Production Projects</span>
+                        </div>
+                        <h3 class="timeline-title">Built Production-Ready Applications</h3>
+                        <p class="timeline-desc">
+                            Developed Navix Grocery, a full-stack grocery platform using React, 
+                            FastAPI, PostgreSQL, Docker, and Nginx. Designed scalable architecture, 
+                            containerized services, and production-ready deployment workflows inspired 
+                            by real-world DevOps practices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                
+                    <div class="timeline-card">
+                
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2027+</span>
+                            <span class="timeline-type">Vision</span>
+                        </div>
+                
+                        <h3 class="timeline-title">
+                            DevOps & Cloud Engineer
+                        </h3>
+                
+                        <p class="timeline-desc">
+                            Continuously expanding my expertise in Kubernetes, Terraform,
+                            Ansible, AWS, and cloud-native technologies. My goal is to
+                            contribute to building secure, scalable, and production-ready
+                            infrastructure while growing as a DevOps and Cloud Engineer.
+                        </p>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       ACHIEVEMENTS SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="achievements-section section" id="achievements" aria-label="Achievements">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Beyond The Terminal</span>
+                <h2 class="section-title">Achievements &amp; <span>Recognition</span></h2>
+                <p class="section-subtitle">
+                    Leadership, discipline, and performance — on the field and in the lab.
+                </p>
+            </div>
+
+            <div class="achievements-grid stagger">
+
+                <div class="achievement-card reveal">
+                    <span class="achievement-emoji">🏆</span>
+                    <h3>National Level Kho-Kho</h3>
+                    <p>
+                        Represented at the national level in Kho-Kho — one of India's fastest
+                        traditional team sports. Competed against the best teams from across the country.
+                    </p>
+                    <span class="achievement-badge">National Level Athlete</span>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <span class="achievement-emoji">⭐</span>
+                    <h3>College Team Captain</h3>
+                    <p>
+                        Led the college Kho-Kho team as captain — managing team strategy, player
+                        coordination, and performance under high-pressure match conditions.
+                    </p>
+                    <span class="achievement-badge">Leadership</span>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <span class="achievement-emoji">🤝</span>
+                    <h3>Team Player & Collaborator</h3>
+                    <p>
+                        Sports taught me more about teamwork than any classroom could. I bring the
+                        same discipline, communication, and collaborative spirit to every project I work on.
+                    </p>
+                    <span class="achievement-badge">Teamwork</span>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <span class="achievement-emoji">🔁</span>
+                    <h3>Continuous Learner</h3>
+                    <p>
+                        From Linux to Docker to AWS in 2 years — I commit to constant improvement.
+                        Currently working through Kubernetes and Terraform to expand my cloud skillset.
+                    </p>
+                    <span class="achievement-badge">Growth Mindset</span>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <span class="achievement-emoji">🛠️</span>
+                    <h3>Builder Mentality</h3>
+                    <p>
+                        I don't just study concepts — I build real projects. Every tool I learn
+                        gets applied in a real, deployable project that I can demonstrate.
+                    </p>
+                    <span class="achievement-badge">Project-First</span>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <span class="achievement-emoji">🎓</span>
+                    <h3>Open Source Contributor</h3>
+                    <p>
+                        Actively contributing to open-source projects on GitHub. Sharing Dockerfiles,
+                        CI/CD workflows, and automation scripts to give back to the community.
+                    </p>
+                    <span class="achievement-badge">Community</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════════════════════ -->
+    <section class="contact-section section" id="contact" aria-label="Contact me">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span>Connect</span></h2>
+                <p class="section-subtitle">
+                    Open to DevOps / Cloud Engineer roles, internships, and collaboration opportunities.
+                    Feel free to reach out!
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+
+                <!-- Contact Info Card -->
+                <div class="contact-info-card reveal">
+                    <h3>Contact Information</h3>
+                    <p>
+                        Whether you have a project idea, a job opportunity, or just want
+                        to connect — I'd love to hear from you.
+                    </p>
+
+                    <div class="contact-items">
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-value">
+                                    <a href="mailto:chandu2004gahtori@gmail.com">chandu2004gahtori@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <div class="contact-item-label">Phone / WhatsApp</div>
+                                <div class="contact-item-value">
+                                    <a href="https://wa.me/919837144505" target="_blank" rel="noopener">+91 9837144505</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+                            <div>
+                                <div class="contact-item-label">LinkedIn</div>
+                                <div class="contact-item-value">
+                                    <a href="https://www.linkedin.com/in/chandu-gahtori/" target="_blank"
+                                        rel="noopener">
+                                        linkedin.com/in/chandu-gahtori
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <div class="contact-item-label">GitHub</div>
+                                <div class="contact-item-value">
+                                    <a href="https://github.com/chandugahtori" target="_blank" rel="noopener">
+                                        github.com/chandugahtori
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-value">India · Open to Remote</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/chandu-gahtori/" target="_blank" rel="noopener"
+                            class="social-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/chandugahtori" target="_blank" rel="noopener" class="social-btn"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:chandu2004gahtori@gmail.com" class="social-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/919837144505" target="_blank" rel="noopener" class="social-btn"
+                            aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card reveal">
+                    <h3>Send Me a Message</h3>
+                    <form id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-name">Your Name</label>
+                                <input type="text" id="c-name" name="name" placeholder="John Doe" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="c-email">Your Email</label>
+                                <input type="email" id="c-email" name="email" placeholder="john@email.com" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-subject">Subject</label>
+                            <input type="text" id="c-subject" name="subject"
+                                placeholder="Job Opportunity / Collaboration / Say Hi" />
+                        </div>
+                        <div class="form-group">
+                            <label for="c-message">Message</label>
+                            <textarea id="c-message" name="message" rows="5"
+                                placeholder="Tell me about your project or opportunity…" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TOAST ─────────────────────────────────────────────── -->
+    <div id="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <a href="#home" class="logo">Chandu<span>.</span></a>
+                <p>
+                    DevOps &amp; Cloud Engineer building scalable infrastructure,
+                    automating deployments, and continuously growing.
+                    Open to opportunities — let's build something great.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/chandu-gahtori/" target="_blank" rel="noopener"
+                        class="social-btn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/chandugahtori" target="_blank" rel="noopener" class="social-btn"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:chandu2004gahtori@gmail.com" class="social-btn" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#journey">Journey</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <!-- Download -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <div class="footer-links">
+                    <a href="assets/resume.pdf" download>Download Resume</a>
+                    <a href="https://github.com/chandugahtori" target="_blank" rel="noopener">GitHub Profile</a>
+                    <a href="https://www.linkedin.com/in/chandu-gahtori/" target="_blank" rel="noopener">LinkedIn
+                        Profile</a>
+                    <a href="mailto:chandu2004gahtori@gmail.com">Send Email</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">
+                &copy; 2025 <span>Chandra Shekhar Gahtori</span>. All rights reserved.
             </p>
-
-            <div class="hero-buttons">
-                <button class="btn-primary">View Projects</button>
-                <button class="btn-secondary">Learning Journey</button>
-            </div>
+            <p class="footer-made">
+                Built with <span>♥</span> and a lot of YAML
+            </p>
         </div>
+    </footer>
 
-        <div class="hero-right">
-            <img src="assets/images/profile.jpg" alt="Profile Photo">
-
-            <div class="floating-card card-top">
-                <span>&lt;/&gt;</span>
-                <p>CI/CD<br>GitHub Actions</p>
-            </div>
-
-            <div class="floating-card card-bottom">
-                <span>☁</span>
-                <p>Cloud<br>AWS Basics</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- DEVOPS LEARNING AREAS -->
-    <section class="learning-areas" id="skills">
-
-        <h2>My <span>DevOps</span> Learning Areas</h2>
-        <p class="section-desc">
-            Focused on mastering essential DevOps tools and practices through
-            hands-on projects and continuous learning.
-        </p>
-
-        <div class="areas-grid">
-
-            <div class="area-card">
-                <h3>Linux</h3>
-                <p>
-                    Intermediate knowledge of command-line operations, shell scripting,
-                    system administration, and server management.
-                </p>
-            </div>
-
-            <div class="area-card">
-                <h3>Git & GitHub</h3>
-                <p>
-                    Version control, branching strategies, collaboration workflows,
-                    and CI/CD integration using GitHub Actions.
-                </p>
-            </div>
-
-            <div class="area-card">
-                <h3>Docker</h3>
-                <p>
-                    Containerization concepts, Dockerfile creation,
-                    Docker Compose, and image management.
-                </p>
-            </div>
-
-            <div class="area-card">
-                <h3>AWS Cloud</h3>
-                <p>
-                    Hands-on experience with EC2, S3, IAM,
-                    and deploying basic cloud infrastructure.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
-
-        <h2>Practice & <span>Lab Projects</span></h2>
-        <p class="section-desc">
-            Hands-on DevOps projects built during learning and practice labs.
-        </p>
-
-        <!-- FILTER BUTTONS -->
-        <div class="project-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="cicd">CI/CD</button>
-            <button class="filter-btn" data-filter="docker">Docker</button>
-            <button class="filter-btn" data-filter="cloud">Cloud</button>
-        </div>
-
-        <!-- PROJECT GRID -->
-        <div class="project-grid">
-
-            <div class="project-card cicd">
-                <h3>CI/CD Pipeline with GitHub Actions</h3>
-                <p>
-                    Automated build and deployment pipeline using GitHub Actions
-                    for continuous integration and testing.
-                </p>
-                <span class="tag">CI/CD</span>
-            </div>
-
-            <div class="project-card docker">
-                <h3>Dockerized Web Application</h3>
-                <p>
-                    Containerized a web application using Docker,
-                    Dockerfile, and Docker Compose.
-                </p>
-                <span class="tag">Docker</span>
-            </div>
-
-            <div class="project-card cloud">
-                <h3>AWS EC2 & S3 Setup</h3>
-                <p>
-                    Deployed applications on AWS EC2, configured S3 buckets,
-                    and managed IAM permissions.
-                </p>
-                <span class="tag">Cloud</span>
-            </div>
-
-            <div class="project-card cicd">
-                <h3>Automated Testing Workflow</h3>
-                <p>
-                    Implemented automated testing workflows triggered
-                    on every GitHub push.
-                </p>
-                <span class="tag">CI/CD</span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- LEARNING JOURNEY & SKILLS -->
-    <section class="journey-skills">
-
-        <h2>My <span>Learning Journey</span></h2>
-
-        <div class="journey-container">
-
-            <!-- LEFT: JOURNEY -->
-            <div class="journey">
-                <div class="journey-item">
-                    <span>2023</span>
-                    <p>Started with Linux fundamentals, command-line usage, and Git basics.</p>
-                </div>
-
-                <div class="journey-item">
-                    <span>2024</span>
-                    <p>Learned Docker, containerization concepts, and CI/CD using GitHub Actions.</p>
-                </div>
-
-                <div class="journey-item">
-                    <span>2025</span>
-                    <p>Working with AWS Free Tier (EC2, S3, IAM) and building real practice labs.</p>
-                </div>
-            </div>
-
-            <!-- RIGHT: SKILLS -->
-            <div class="skills">
-
-                <div class="skill">
-                    <p>Linux <span>80%</span></p>
-                    <div class="bar">
-                        <div class="fill linux"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <p>Git & GitHub <span>80%</span></p>
-                    <div class="bar">
-                        <div class="fill git"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <p>Docker <span>70%</span></p>
-                    <div class="bar">
-                        <div class="fill docker"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <p>CI/CD (GitHub Actions) <span>65%</span></p>
-                    <div class="bar">
-                        <div class="fill cicd"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <p>AWS Basics <span>60%</span></p>
-                    <div class="bar">
-                        <div class="fill aws"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-   
-  <!-- CONTACT SECTION -->
-<section class="contact" id="contact">
-
-    <h2>Connect With <span>Me</span></h2>
-    <p class="section-desc">
-      Feel free to connect with me through any of the platforms below.
-    </p>
-  
-    <div class="contact-icons">
-
-        <a href= "https://www.linkedin.com/in/chandu-gahtori/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      
-        <a href="https://github.com/chandugahtori" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-        <a href="mailto:your-email@gmail.com">
-          <i class="fas fa-envelope"></i>
-        </a>
-      
-        <a href="https://wa.me/91983714505" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      
-      </div>
-      
-  </section>
-  
-  
-
-    <script src="js/main.js"></script>
-
-
+    <!-- ── SCRIPTS ──────────────────────────────────────────────── -->
+    <script src="js/main.js" defer></script>
 
 </body>
 
